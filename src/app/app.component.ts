@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
+import { MatSidenav, MatSidenavContainer, MatSidenavContent } from '@angular/material/sidenav';
+import { MatToolbar } from '@angular/material/toolbar';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [MatSidenav, MatSidenavContainer, MatSidenavContent, MatToolbar, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.sass'
+  styles: `
+    .mat-drawer-container
+      height: 100%
+  `
 })
-export class AppComponent {
-  title = 'angular-wroclaw';
-}
+export class AppComponent {}
