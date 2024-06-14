@@ -1,0 +1,25 @@
+<section>
+  <div><span>classicField:</span> {{ classicField }}</div>
+</section>
+
+<section class="actions">
+  <button mat-button (click)="setClassic()">set</button>
+</section>
+
+<section>
+  <div><span>signalWithPrimitive:</span> {{ signalWithPrimitive() }}</div>
+</section>
+
+<section class="actions">
+  <button mat-button (click)="setPrimitive()">set</button>
+  <button mat-button (click)="updatePrimitive()">update</button>
+</section>
+
+<section>
+  <div><span>signalWithArray:</span> {{ signalWithArray() }}</div>
+</section>
+
+<section class="actions">
+  <button mat-button (click)="setArray()">set</button>
+  <button mat-button (click)="updateArray()">update</button>
+</section>
