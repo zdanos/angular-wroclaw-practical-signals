@@ -1,0 +1,20 @@
+<mat-form-field appearance="outline">
+  <input matInput [formControl]="searchControl" placeholder="Search...">
+</mat-form-field>
+<!--<mat-checkbox [checked]="premiumOnly()" (change)="setPremiumFilter($event.checked)">Premium only</mat-checkbox>-->
+
+<mat-list>
+  @for (brand of filteredBrands(); track brand) {
+    <mat-list-item>{{ brand }}</mat-list-item>
+  }
+</mat-list>
+
+<button mat-button (click)="toggleAdditionalListVisibility()">Toggle additional list</button>
+
+@if (additionalListVisible()) {
+  <mat-list>
+    @for (brand of filteredBrands(); track brand) {
+      <mat-list-item>{{ brand }}</mat-list-item>
+    }
+  </mat-list>
+}
