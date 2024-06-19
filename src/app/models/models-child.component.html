@@ -1,0 +1,5 @@
+<mat-chip-listbox [value]="month()">
+  @for (month of months; track month) {
+    <mat-chip-option [value]="month" (selectionChange)="pickMonth($event.source.value)">{{ month }}</mat-chip-option>
+  }
+</mat-chip-listbox>
